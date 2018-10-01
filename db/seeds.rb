@@ -38,9 +38,9 @@ roger = Alien.create(name: "Roger", bio: "area 51 reget who doesn't care what yo
 eetee = Alien.create(name: "E.T.", bio: "phoning home — doesn't service isn't in range... nice though", owner: morgan, planet: errkt,  therapy: true)
 zoidburg = Alien.create(name: "Zoidburg", bio: "posing on errkt as a mediocre doctor - wants to give back but not that much", owner: zoe , planet: zirgon9,  therapy: false)
 glip_glops = Alien.create(name: "Glip Glops", bio: "mind hive jellies with nothing to do and a distaste for peanut butter", owner: micheal, planet: texacar,  therapy: false)
-timelord = Alien.create(name: "Time Lord", bio: "travels time and space for friendship, adventure and ruckus", owner: violet, planet: saturn,  therapy: true)
+timelord = Alien.create(name: "Time Lord", bio: "travels time and space for friendship, adventure, and ruckus", owner: violet, planet: saturn,  therapy: true)
 moon_creature = Alien.create(name: "Moon Creature", bio: "posed as errkt's moon and hatched early to disprove flat errkt believers", owner: violet, planet: mars,  therapy: true)
-tree_guy = Alien.create(name: "Tree Guy", bio: "heals surrounding life forms because quote eh, why not? unquote.", owner: christie, planet: mars,  therapy: true)
+tree_guy = Alien.create(name: "Tree Guy", bio: "heals surrounding life forms because quote 'eh, why not?' unquote.", owner: christie, planet: mars,  therapy: true)
 
 clothes = Toy.create(name: "Dress up clothes", alien: roger)
 doll = Toy.create(name: "Doll", alien: stitch)

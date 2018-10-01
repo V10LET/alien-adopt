@@ -1,2 +1,8 @@
 <h1>Aliens#index</h1>
 <p>Find me in app/views/aliens/index.html.erb</p>
+
+<ul>
+<%@aliens.each do |alien|%>
+<li><%= link_to alien.name, alien_path(alien)%></li>
+<%end%>
+</ul>

@@ -1,2 +1,15 @@
 <h1>Aliens#show</h1>
 <p>Find me in app/views/aliens/show.html.erb</p>
+
+<p>Owner: <%= link_to @alien.owner.name, owner_path(@alien.owner.id)%></p>
+<p>Name: <%=@alien.name%></p>
+<p>Bio: <%=@alien.bio%></p>
+<p>Therapy? <%=@alien.therapy%></p>
+<%@alien.toys.each { |toy| toy.name}%>
+<p>Planet: <%=@alien.planet.name%></p>
+<p>Personality Traits:</p>
+<ul>
+<%@alien.personalities.each do |personality| %>
+<li><%=personality.name%></li>
+<%end%>
+</ul>
