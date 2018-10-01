@@ -1,2 +1,16 @@
-<h1>Aliens#edit</h1>
-<p>Find me in app/views/aliens/edit.html.erb</p>
+<h1>Change Alien's Favorite Toy</h1>
+
+<h2>You are editing: <%= @alien.name %></h2>
+
+<%= form_with model: @alien do |form| %>
+  <p><%= form.label :toy%>
+  <%= form.collection_select :toy_id, Toy.all, :id, :name%></p>
+
+  <%= form.label "Is this a certified therapy alien?"%>
+  <p><%= label :therapy, "Yes", value: true %>
+  <%= form.radio_button :therapy, true, value: true%>
+  <%= label :therapy, "No", value: true %>
+  <%= form.radio_button :therapy, false, value: false%></p>
+  
+  <p><%= form.submit %></p>
+<% end %>

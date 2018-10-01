@@ -1,3 +1,3 @@
 class Toy < ApplicationRecord
-  belongs_to :alien
+  has_many :aliens
 end

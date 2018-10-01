@@ -6,6 +6,7 @@ class CreateAliens < ActiveRecord::Migration[5.2]
       t.boolean :therapy
       t.belongs_to :planet, foreign_key: true
       t.belongs_to :owner, foreign_key: true
+      t.belongs_to :toy, foreign_key: true
 
       t.timestamps
     end

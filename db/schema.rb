@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 2018_10_01_185418) do
     t.boolean "therapy"
     t.integer "planet_id"
     t.integer "owner_id"
+    t.integer "toy_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["owner_id"], name: "index_aliens_on_owner_id"
     t.index ["planet_id"], name: "index_aliens_on_planet_id"
+    t.index ["toy_id"], name: "index_aliens_on_toy_id"
   end
 
   create_table "owners", force: :cascade do |t|
@@ -60,10 +62,8 @@ ActiveRecord::Schema.define(version: 2018_10_01_185418) do
 
   create_table "toys", force: :cascade do |t|
     t.string "name"
-    t.integer "alien_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["alien_id"], name: "index_toys_on_alien_id"
   end
 
 end
