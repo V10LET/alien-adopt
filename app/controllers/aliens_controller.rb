@@ -13,7 +13,6 @@ class AliensController < ApplicationController
 
   def create
     @alien = Alien.new(aliens_params)
-    byebug
     if @alien.valid?
       @alien.save
       redirect_to alien_path(@alien)
