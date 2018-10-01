@@ -28,5 +28,9 @@
   <p><%= form.collection_select :planet_id, Planet.all, :id, :name %></p>
   <br>
 
+  <p><%= form.label :owner%></p>
+  <p><%= form.collection_select :owner_id, Owner.all, :id, :name %></p>
+  <br>
+
   <p><%= form.submit %></p>
 <% end %>
