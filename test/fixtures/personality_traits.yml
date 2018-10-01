@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personality: one
+  alien: one
+
+two:
+  personality: two
+  alien: two
