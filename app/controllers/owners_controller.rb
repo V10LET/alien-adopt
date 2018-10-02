@@ -6,8 +6,9 @@ class OwnersController < ApplicationController
   end
 
   def show
+    @owner = Owner.find(params[:id])
     if session[:owner_id] == params[:id].to_i
-      Owner.find(session[:owner_id])
+        @owner = Owner.find(session[:owner_id])
     end
   end
 
