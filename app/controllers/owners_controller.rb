@@ -1,6 +1,6 @@
 class OwnersController < ApplicationController
+before_action :redirect_if_not_logged_in
 
-# only for debugging
   def index
     @owners = Owner.all
   end
@@ -8,7 +8,7 @@ class OwnersController < ApplicationController
   def show
     @owner = Owner.find(params[:id])
     if session[:owner_id] == params[:id].to_i
-        @owner = Owner.find(session[:owner_id])
+        @current_owner = current_owner
     end
   end
 
@@ -26,6 +26,11 @@ class OwnersController < ApplicationController
       flash[:errors] = @owner.errors.full_messages
       redirect_to new_owner_path
     end
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to login_path
   end
 
 private

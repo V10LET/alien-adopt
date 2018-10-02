@@ -1,14 +1,18 @@
+<% if @current_owner %>
 
-<h1>Name: <%=@owner.name%></h1>
-<p>Bio: <%=@owner.bio%></p>
-<p>Planet: <%=@owner.planet.name%></p>
-<p>Therapy? <%=@owner.therapy%></p>
-<p>Email: <%=@owner.email%></p>
-<p>Aliens you've adopted:</p>
-<ul>
-<%@owner.aliens.each do |alien| %>
-<li><%= alien.name%></li>
-<%end%>
-</ul>
+  <h1>Name: <%=@owner.name%></h1>
+  <p>Bio: <%=@owner.bio%></p>
+  <p>Planet: <%=@owner.planet.name%></p>
+  <p>Therapy? <%=@owner.therapy%></p>
+  <p>Email: <%=@owner.email%></p>
+  <p>Aliens you've adopted:</p>
+  <ul>
+  <%@owner.aliens.each do |alien| %>
+  <li><%= alien.name%></li>
+  <%end%>
+  </ul>
 
-
+<%= button_to "I wanna loggity log out", '/logout', method: :delete %>
+<% else %>
+  Meep.
+<% end %>
