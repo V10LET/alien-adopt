@@ -1,3 +1,15 @@
 // Place all the styles related to the owners controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}

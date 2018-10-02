@@ -4,9 +4,11 @@ class OwnersController < ApplicationController
   def index
     @owners = Owner.all
   end
-  
+
   def show
-    @owner = Owner.find(params[:id])
+    if session[:owner_id] == params[:id].to_i
+      Owner.find(session[:owner_id])
+    end
   end
 
   def new
@@ -17,6 +19,7 @@ class OwnersController < ApplicationController
     @owner = Owner.new(owners_params)
     if @owner.valid?
       @owner.save
+      session[:owner_id] = @owner.id
       redirect_to owner_path(@owner)
     else
       flash[:errors] = @owner.errors.full_messages
@@ -27,6 +30,6 @@ class OwnersController < ApplicationController
 private
 
   def owners_params
-    params.require(:owner).permit(:name, :bio, :planet_id, :email, :therapy)
+    params.require(:owner).permit(:name, :bio, :planet_id, :email, :therapy, :password, :password_confirmation)
   end
 end

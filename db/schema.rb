@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_185418) do
     t.string "name"
     t.string "bio"
     t.string "email"
+    t.string "password_digest"
     t.boolean "therapy"
     t.integer "planet_id"
     t.datetime "created_at", null: false

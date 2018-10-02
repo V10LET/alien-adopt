@@ -4,6 +4,7 @@ class CreateOwners < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :bio
       t.string :email
+      t.string :password_digest
       t.boolean :therapy
       t.belongs_to :planet, foreign_key: true
 

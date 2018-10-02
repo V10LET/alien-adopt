@@ -1,4 +1,5 @@
 class Owner < ApplicationRecord
+  has_secure_password
   belongs_to :planet
   has_many :aliens
 
