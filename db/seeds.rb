@@ -26,12 +26,12 @@ texacar = Planet.create(name: "Texacar", climate: "Spicy", gravity: 1, diet: "St
 mars = Planet.create(name: "Mars", climate: "Toasty", gravity: 234, diet: "Red Grapes")
 errkt = Planet.create(name: "Errkt", climate: "Temperate", gravity: 9.8, diet: "Chipotle Bowl")
 
-zoe = Owner.create(name: "Zoe", bio: "Got kicked off zirgon9 for illegal taco mining", therapy: false, planet: mars)
-violet = Owner.create(name: "Violet", bio: "Needs new seeing 3 eyed alien", therapy: true, planet: saturn)
-jordan = Owner.create(name: "Jordan", bio: "Texacar's most infamous kickboxing legend", therapy: false, planet: texacar)
-micheal = Owner.create(name: "Micheal", bio: "Defeated RagnarIII in Red Grape eating competition", therapy: false, planet: mars)
-morgan = Owner.create(name: "Morgan", bio: "Looking for fourth heart replacement", therapy: true, planet: zirgon9 )
-christie = Owner.create(name: "Christie", bio: "Looking to vacation on Errkt. Came during non-temperate season :( ", therapy: false, planet: errkt)
+zoe = Owner.create(name: "Zoe", bio: "Got kicked off zirgon9 for illegal taco mining", therapy: false, planet: mars, email: "mail1@amail.com")
+violet = Owner.create(name: "Violet", bio: "Needs 3rd eye for seeing eye alien", therapy: true, planet: saturn, email: "mail2@bmail.org")
+jordan = Owner.create(name: "Jordan", bio: "Texacar's most infamous kickboxing legend", therapy: false, planet: texacar, email: "mail3@cmail.io")
+micheal = Owner.create(name: "Micheal", bio: "Defeated RagnarIII in Red Grape eating competition", therapy: false, planet: mars, email: "mail4@dmail.co")
+morgan = Owner.create(name: "Morgan", bio: "Looking for fourth heart replacement", therapy: true, planet: zirgon9 , email: "mail5@email.com")
+christie = Owner.create(name: "Christie", bio: "Looking to vacation on Errkt. Came during non-temperate season :( ", therapy: false, planet: errkt, email: "mail6@fmail.com")
 
 clothes = Toy.create(name: "Dress Up Clothes")
 doll = Toy.create(name: "Doll")

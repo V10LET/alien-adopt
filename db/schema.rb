@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_185418) do
   create_table "owners", force: :cascade do |t|
     t.string "name"
     t.string "bio"
+    t.string "email"
     t.boolean "therapy"
     t.integer "planet_id"
     t.datetime "created_at", null: false

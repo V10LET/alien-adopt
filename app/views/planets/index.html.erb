@@ -1,2 +1,13 @@
-<h1>Planets#index</h1>
-<p>Find me in app/views/planets/index.html.erb</p>
+<h1>Planets</h1>
+
+
+<%@planets.each do |planet|%>
+<ul>
+<li><%= planet.name%></li>
+<li><%= planet.climate%></li>
+<li><%= planet.gravity%></li>
+<li><%= planet.diet%></li>
+</ul>
+<br>
+<%end%>
+

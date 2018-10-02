@@ -1,2 +1,7 @@
-<h1>Personalities#index</h1>
-<p>Find me in app/views/personalities/index.html.erb</p>
+<h1>Personalities</h1>
+
+<ul>
+<%@personalities.each do |personality|%>
+<li><%= personality.name%></li>
+<%end%>
+</ul>

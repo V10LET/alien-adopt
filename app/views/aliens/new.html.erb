@@ -1,2 +1,39 @@
 <h1>Drop Off/Create An Alien</h1>
-<%= render "form"%>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |m| %>
+    <h3 style="color: red"><%= m %></h3>
+  <% end %>
+<% end %>
+
+
+<%= form_with model: @alien do |form| %>
+  <p><%= form.label :name%></p>
+  <p><%= form.text_field :name %></p>
+  <br>
+
+  <p><%= form.label :bio%></p>
+  <p><%= form.text_area :bio%></p>
+  <br>
+
+  <%= form.label "Is this a certified therapy alien?"%>
+  <p><%= label :therapy, "Yes", value: true %>
+  <%= form.radio_button :therapy, true, value: true%>
+  <%= label :therapy, "No", value: true %>
+  <%= form.radio_button :therapy, false, value: false%></p>
+  <br>
+
+  <p><%= form.label :toy%></p>
+  <p><%= form.collection_select :toy_id, Toy.all, :id, :name%></p>
+  <br>
+
+  <p><%= form.label :planet%></p>
+  <p><%= form.collection_select :planet_id, Planet.all, :id, :name %></p>
+  <br>
+
+  <p><%= form.label :owner%></p>
+  <p><%= form.collection_select :owner_id, Owner.all, :id, :name %></p>
+  <br>
+
+  <p><%= form.submit %></p>
+<% end %>

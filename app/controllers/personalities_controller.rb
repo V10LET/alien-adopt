@@ -1,7 +1,10 @@
 class PersonalitiesController < ApplicationController
   def index
+    @personalities = Personality.all
+  end
+  
+  def show
+    @personality = Personality.find(params[:id])
   end
 
-  def show
-  end
 end
