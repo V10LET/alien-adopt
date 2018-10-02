@@ -1,6 +1,9 @@
-<h1>Alien: <%=@alien.name%></h1>
-
-<p>Owner: <%= link_to @alien.owner.name, owner_path(@alien.owner.id)%></p>
+<h1>Hello, from: <%=@alien.name%>!</h1>
+<% if @alien.owner == nil %>
+  <p style="color: orange; font-style: oblique">Alien has no owners yet!</p>
+<%else%>
+  <p>Owner: <%= link_to @alien.owner.name, owner_path(@alien.owner.id)%></p>
+<%end%>
 <p>Bio: <%=@alien.bio%></p>
 <p>Therapy? <%=@alien.therapy%></p>
 <p>Favorite Toy: <%= @alien.toy.name %></p>
@@ -13,4 +16,3 @@
 </ul>
 
 <%= button_to "Make a new alien", new_alien_path, method: :get %>
-
