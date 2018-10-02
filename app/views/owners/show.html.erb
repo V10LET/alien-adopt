@@ -6,15 +6,16 @@
     <p>Therapy? <%=@owner.therapy%></p>
     <p>Email: <%=@owner.email%></p>
     <p>Aliens you've adopted:</p>
+    <% if @owner.aliens == nil || @owner.aliens == [] %>
+      <span style="font-style: oblique">You haven't adopted any aliens yet!</span>
+      <br/>
+    <% else %>
     <ul>
-    <%@owner.aliens.each do |alien| %>
-      <% if alien == "" || alien == nil %>
-        <span style="font-style: oblique">You haven't adopted any aliens yet!</span>
-      <% else %>
+      <%@owner.aliens.each do |alien| %>
         <li><%= alien.name%></li>
       <% end %>
-    <% end %>
     </ul>
+    <% end %>
   </div>
   <%= button_to "I wanna loggity log out", '/logout', method: :delete %>
 <% end %>
