@@ -1,4 +1,5 @@
 <% if @current_owner %>
+
   <h1>Hey, <%=@owner.name.titleize%>!</h1>
   <div class="form">
     <p><strong>Bio:</strong> <%=@owner.bio%></p>
@@ -18,9 +19,15 @@
     <% end %>
   </div>
   <%= button_to "I wanna loggity log out", '/logout', method: :delete %>
+
 <% else %>
+
   <h1>Sorry, this profile is private.</h1>
   <h3>Please choose an option: </h3>
   <%= button_to "See all available Aliens", '/aliens', method: :get%>
-  <%= button_to "Go to My Profile", url: owner_path(session[:owner_id]), method: :get %>
+
+  <form action="/owners/<%= session[:owner_id]%>">
+      <input type="submit" value="Go to My Profile" />
+  </form>
+
 <% end %>

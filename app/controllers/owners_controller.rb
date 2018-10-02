@@ -6,9 +6,13 @@ before_action :redirect_if_not_logged_in
   end
 
   def show
-    @owner = Owner.find(params[:id])
-    if session[:owner_id] == params[:id].to_i
+    if Owner.find_by_id(params[:id].to_s) == nil
+      redirect_to login_path
+    else
+      @owner = Owner.find(params[:id])
+      if session[:owner_id] == params[:id].to_i
         @current_owner = current_owner
+      end
     end
   end
 
