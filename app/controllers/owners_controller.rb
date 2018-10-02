@@ -1,5 +1,5 @@
 class OwnersController < ApplicationController
-before_action :redirect_if_not_logged_in
+# before_action :redirect_if_not_logged_in
 
   def index
     @owners = Owner.all
@@ -32,10 +32,6 @@ before_action :redirect_if_not_logged_in
     end
   end
 
-  def destroy
-    session[:user_id] = nil
-    redirect_to login_path
-  end
 
 private
 

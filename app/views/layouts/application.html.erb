@@ -11,7 +11,13 @@
 
   <body>
     <div class="nav">
+    <%if session[:owner_id] == nil%>
+      <%flash[:error] = "Please log in to view your profile"%>
+
+      <p><a href="/login">My Profile</a></p>
+    <%else%>
       <p><a href="/owners/<%= session[:owner_id].to_s %>">My Profile</a></p>
+    <%end%>
       <p><%= link_to "Adopt An Alien", aliens_path %></p>
       <p><%= button_to "Logout", '/logout', method: :delete %></p>
   </div>

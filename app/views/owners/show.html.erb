@@ -18,8 +18,12 @@
     </ul>
     <% end %>
   </div>
-  <%= button_to "I wanna loggity log out", '/logout', method: :delete %>
 
+  <%= form_with url: logout_path, method: :delete do |form| %>
+  <%= form.submit "I wanna loggity log out"%>
+  <%end%>
+
+  <%= button_to "Logout out out...out", logout_path, method: :delete%>
 <% else %>
 
   <h1>Sorry, this profile is private.</h1>
