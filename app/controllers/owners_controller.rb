@@ -9,6 +9,8 @@ before_action :redirect_if_not_logged_in
     @owner = Owner.find(params[:id])
     if session[:owner_id] == params[:id].to_i
         @current_owner = current_owner
+    else
+      redirect_to current_owner
     end
   end
 
