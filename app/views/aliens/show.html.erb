@@ -18,7 +18,7 @@
 
 <% if @alien.owner_id == session[:owner_id] %>
   <%= form_with model: @alien do |f| %>
-  <%= f.submit "Return To Adoption Center"%>
+  <%= f.submit "Give Up Your Alien :("%>
   <% end %>
 <% elsif @alien.owner_id == nil%>
   <%= form_with model: @alien do |f| %>
