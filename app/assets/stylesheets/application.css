@@ -42,8 +42,6 @@ h1 {
   text-decoration: none;
 }
 
-.nav a:active {
-  text-decoration: none;
+.nav a:visited {
   color: black;
 }
-

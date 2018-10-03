@@ -1,3 +1,32 @@
 // Place all the styles related to the aliens controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.alien-carousel {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.alien-parent {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.alien-parent a {
+  text-decoration: none;
+}
+
+.alien-parent a:visited {
+  color: black;
+}
+
+.alien-picture {
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  border-radius: 100%;
+}

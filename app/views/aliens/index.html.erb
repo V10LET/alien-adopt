@@ -1,13 +1,12 @@
-<h1>Alien Adoption</h1>
+<h1>Welcome to Alien Adoption!</h1>
 
 <div class="form">
-  <ul>
+  <div class="alien-carousel">
   <%@aliens.each do |alien|%>
-  <img src="assets/<%=alien.name%>.png" alt="<%=alien.name%>"/>
-  <li><%= link_to alien.name, alien_path(alien)%></li>
+    <div class="alien-parent">
+      <div><a href="/aliens/<%=alien.id%>"><img class="alien-picture" src="/assets/<%=alien.name%>.png" alt="<%=alien.name%>"/></a></div>
+      <%= link_to alien.name, alien_path(alien)%>
+    </div>
   <%end%>
-  </ul>
 </div>
-
-<h3>Did you discover a new alien? Need to make sure an alien finds a good home?</h3>
-<%= button_to "Bring your new alien here!", new_alien_path, method: :get %>
+</div>

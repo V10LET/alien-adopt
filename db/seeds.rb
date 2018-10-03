@@ -46,7 +46,7 @@ paul = Owner.create(name: 'paul', bio: 'blah', planet: remool, therapy: false)
 
 stitch = Alien.create(toy: surf, name: "Stitch", bio: "escaped experiment 626 with a lot of love to give", owner: paul, planet: errkt,  therapy: true)
 roger = Alien.create(toy: clothes, name: "Roger", bio: "area 51 reject who doesn't care what you think", owner: paul, planet: errkt,  therapy: false)
-eetee = Alien.create(toy: phone, name: "E.T.", bio: "phoning home — got dial tone", owner: paul, planet: errkt,  therapy: true)
+eetee = Alien.create(toy: phone, name: "ET", bio: "phoning home — got dial tone", owner: paul, planet: errkt,  therapy: true)
 zoidburg = Alien.create(toy: clamps, name: "Zoidberg", bio: "posing on errkt as a mediocre doctor - wants to give back but not that much", owner: paul , planet: amphibios,  therapy: false)
 glip_glops = Alien.create(toy: basket, name: "Glip Glops", bio: "mind hive jellies with nothing to do and a distaste for peanut butter", owner: paul, planet: traflorkia,  therapy: false)
 timelord = Alien.create(toy: tardis, name: "The Doctor", bio: "travels time and space for friendship, adventure, and ruckus", owner: paul, planet: gallifrey,  therapy: true)
