@@ -1,9 +1,9 @@
 <% if @current_owner %>
 
-  <h1>Hey, <%=@owner.name.titleize%>!</h1>
+  <h1>🖖 Hey, <%=@owner.name.titleize%>!</h1>
   <div class="form">
     <p><strong>Bio:</strong> <%=@owner.bio%></p>
-    <p><strong>Planet:</strong> <%=@owner.planet.name%></p>
+    <p><strong>Planet:</strong> <%=link_to @owner.planet.name, planet_path(@owner.planet.id)%></p>
     <p><strong>Therapy?</strong> <%=@owner.therapy%></p>
     <p><strong>Email:</strong> <%=@owner.email%></p>
     <p><strong>Aliens you've adopted:</strong></p>
@@ -18,6 +18,7 @@
     </ul>
     <% end %>
   </div>
+  <br>
   <%= button_to "I Wanna Loggity Log Out", logout_path, method: :delete, class: "button logout_button"%>
 
 <% elsif session[:owner_id] == nil %>

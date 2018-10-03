@@ -17,9 +17,12 @@
       <div class="alien-logo">
         <% if session[:owner_id] %>
            <a href="<%=owner_path(session[:owner_id].to_s)%>"><p class="logo-nav">
-             <img src="/assets/alien.png" alt="alien-adoption">Alien Adopt</p></a>
+             <!-- <img src="/assets/alien.png" alt="alien-adoption"> -->
+             👽 Alien Adopt</p></a>
         <%else%>
-          <a href="/login"><p class="logo-nav"><%= image_tag ("alien.png")%>Alien Adopt</p></a>
+          <a href="/login"><p class="logo-nav">
+            <!-- <%= image_tag ("alien.png")%> -->
+            👽 Alien Adopt</p></a>
         <%end%>
       </div>
 
