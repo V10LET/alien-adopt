@@ -1,9 +1,12 @@
-<h1>Aliens</h1>
+<h1>Alien Adoption</h1>
 
-<ul>
-<%@aliens.each do |alien|%>
-<li><%= link_to alien.name, alien_path(alien)%></li>
-<%end%>
-</ul>
+<div class="form">
+  <ul>
+  <%@aliens.each do |alien|%>
+  <li><%= link_to alien.name, alien_path(alien)%></li>
+  <%end%>
+  </ul>
+</div>
 
-<%= button_to "Make a new alien", new_alien_path, method: :get %>
+<h3>Did you discover a new alien? Need to make sure an alien finds a good home?</h3>
+<%= button_to "Bring your new alien here!", new_alien_path, method: :get %>

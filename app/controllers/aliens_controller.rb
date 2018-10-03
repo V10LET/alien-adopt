@@ -7,6 +7,18 @@ class AliensController < ApplicationController
     @alien = Alien.find(params[:id])
   end
 
+  def update
+    @alien = Alien.find(params[:id])
+    if @alien.owner_id == session[:owner_id]
+      @alien.update_column(:owner_id, nil)
+      redirect_to "/owners/#{session[:owner_id]}"
+    else
+      @alien.update(owner_id: session[:owner_id])
+      @alien.owner_id = session[:owner_id]
+      redirect_to "/owners/#{session[:owner_id]}"
+    end
+  end
+
   def new
     @alien = Alien.new
   end
@@ -22,19 +34,13 @@ class AliensController < ApplicationController
     end
   end
 
-  def edit
-    @alien = Alien.find(params[:id])
-  end
-
-  def update
-    @alien = Alien.find(params[:id])
-    @alien.update(aliens_params)
-    redirect_to "/aliens/#{@alien.id}"
-  end
-
   private
 
   def aliens_params
     params.require(:alien).permit(:name, :bio, :planet_id, :toy_id, :owner_id, :therapy)
+  end
+
+  def update_params
+    params.require(:alien).permit(:owner_id)
   end
 end

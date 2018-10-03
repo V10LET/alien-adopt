@@ -2,8 +2,9 @@
 <span style="font-style: oblique">Make Your Profile Below:</span>
 
 <% if flash[:errors] %>
+  <br>
   <% flash[:errors].each do |m| %>
-    <h3 style="color: red, text-style: oblique"><%= m %></h3>
+    <span style="color: red; font-style: oblique"><%= m %></span>
   <% end %>
 <% end %>
 

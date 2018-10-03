@@ -13,8 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+
 body {
   margin: 0 auto;
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Bai Jamjuree";
+  font-weight: 700;
 }
 .nav {
   display: flex;

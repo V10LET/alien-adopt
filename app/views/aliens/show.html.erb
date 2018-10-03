@@ -1,17 +1,30 @@
-<h1>Hello, from: <%=@alien.name%>!</h1>
+<h1>Meet <%=@alien.name%>!</h1>
 <% if @alien.owner == nil %>
   <p style="color: orange; font-style: oblique">Alien has no owners yet!</p>
 <%else%>
   <p>Owner: <%= link_to @alien.owner.name, owner_path(@alien.owner.id)%></p>
 <%end%>
-<p>Bio: <%=@alien.bio%></p>
-<p>Therapy? <%=@alien.therapy%></p>
-<p>Favorite Toy: <%= @alien.toy.name %></p>
-<p>Planet: <%=@alien.planet.name%></p>
-<p>Personality Traits:</p>
-<ul>
-<%@alien.personalities.each do |personality| %>
-<li><%=personality.name%></li>
-<%end%>
-</ul>
+<div class="form">
+  <p><strong>Bio: </strong><%=@alien.bio%></p>
+  <p><strong>Therapy Alien? </strong><%=@alien.therapy%></p>
+  <p><strong>Favorite Toy: </strong><%= @alien.toy.name %></p>
+  <p><strong>Planet of Origin: </strong><%=@alien.planet.name%></p>
+  <p><strong>Personality Traits:</strong></p>
+  <ul>
+    <%@alien.personalities.each do |personality| %>
+    <li><%=personality.name%></li>
+    <%end%>
+  </ul>
+</div>
 
+<% if @alien.owner_id == session[:owner_id] %>
+  <%= form_with model: @alien do |f| %>
+  <%= f.submit "Return To Adoption Center"%>
+  <% end %>
+<% elsif @alien.owner_id == nil%>
+  <%= form_with model: @alien do |f| %>
+  <%= f.submit "Adopt Me"%>
+  <% end %>
+<% else %>
+  <button type="button" disabled>This Alien Has Been Adopted :(</button>
+<% end %>

@@ -1,4 +1,4 @@
-<h1>Drop Off/Create An Alien</h1>
+<h1>New Alien Form</h1>
 
 <% if flash[:errors] %>
   <% flash[:errors].each do |m| %>
@@ -8,32 +8,23 @@
 
 
 <%= form_with model: @alien do |form| %>
-  <p><%= form.label :name%></p>
+  <p><strong><%= form.label :name%></strong></p>
   <p><%= form.text_field :name %></p>
-  <br>
 
-  <p><%= form.label :bio%></p>
+  <p><strong><%= form.label :bio%></strong></p>
   <p><%= form.text_area :bio%></p>
-  <br>
 
-  <%= form.label "Is this a certified therapy alien?"%>
+  <strong><%= form.label "Is this a certified therapy alien?"%></strong>
   <p><%= label :therapy, "Yes", value: true %>
   <%= form.radio_button :therapy, true, value: true%>
   <%= label :therapy, "No", value: true %>
   <%= form.radio_button :therapy, false, value: false%></p>
-  <br>
 
-  <p><%= form.label :toy%></p>
-  <p><%= form.collection_select :toy_id, Toy.all, :id, :name%></p>
-  <br>
+  <p><strong><%= form.label "Favorite Toy"%> </strong><%= form.collection_select :toy_id, Toy.all, :id, :name%></p>
 
-  <p><%= form.label :planet%></p>
-  <p><%= form.collection_select :planet_id, Planet.all, :id, :name %></p>
-  <br>
+  <p><strong><%= form.label "Planet of Origin"%> <strong><%= form.collection_select :planet_id, Planet.all, :id, :name %></p>
 
-  <p><%= form.label :owner%></p>
-  <p><%= form.collection_select :owner_id, Owner.all, :id, :name %></p>
-  <br>
+  <p><strong><%= form.label :owner%> <strong><%= form.collection_select :owner_id, Owner.all, :id, :name %></p>
 
   <p><%= form.submit %></p>
 <% end %>
