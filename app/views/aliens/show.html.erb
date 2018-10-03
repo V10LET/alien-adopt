@@ -16,11 +16,15 @@
     <%end%>
 </div>
 
-<% if @alien.owner_id == session[:owner_id] %>
+<% if session[:owner_id] == nil %>
+  <%= form_with url: "/login" do |f| %>
+  <%= f.submit "Login"%>
+  <% end %>
+<% elsif @alien.owner_id == session[:owner_id] %>
   <%= form_with model: @alien do |f| %>
   <%= f.submit "Give Up Your Alien :("%>
   <% end %>
-<% elsif @alien.owner_id == nil%>
+<% elsif session[:owner_id] && @alien.owner_id == nil%>
   <%= form_with model: @alien do |f| %>
   <%= f.submit "Adopt Me"%>
   <% end %>

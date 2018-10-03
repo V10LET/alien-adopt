@@ -20,9 +20,18 @@
   </div>
   <%= button_to "I wanna loggity log out", logout_path, method: :delete%>
 
-<% else %>
+<% elsif session[:owner_id] == nil %>
 
   <h1>Sorry, this profile is private.</h1>
+  <h3>Please choose an option: </h3>
+  <%= button_to "See all available Aliens", '/aliens', method: :get%>
+
+  <form action="/login">
+      <input type="submit" value="Login" />
+  </form>
+
+ <% else %>
+ <h1>Sorry, this profile is private.</h1>
   <h3>Please choose an option: </h3>
   <%= button_to "See all available Aliens", '/aliens', method: :get%>
 
