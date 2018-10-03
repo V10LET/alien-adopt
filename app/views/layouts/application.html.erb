@@ -19,7 +19,7 @@
     <%else%>
       <p><a href="/owners/<%= session[:owner_id].to_s %>">My Profile</a></p>
     <%end%>
-      <p><%= link_to "See Home Planets", planets_path %></p>
+      <p><%= link_to "Home Planets", planets_path %></p>
       <p><%= link_to "Adopt An Alien", aliens_path %></p>
       <p><%= button_to "Logout", '/logout', method: :delete %></p>
   </div>
