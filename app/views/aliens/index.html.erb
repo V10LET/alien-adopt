@@ -3,6 +3,7 @@
 <div class="form">
   <ul>
   <%@aliens.each do |alien|%>
+  <img src="assets/<%=alien.name%>.png" alt="<%=alien.name%>"/>
   <li><%= link_to alien.name, alien_path(alien)%></li>
   <%end%>
   </ul>
