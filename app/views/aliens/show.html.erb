@@ -9,12 +9,11 @@
   <p><strong>Therapy Alien? </strong><%=@alien.therapy%></p>
   <p><strong>Favorite Toy: </strong><%= @alien.toy.name %></p>
   <p><strong>Planet of Origin: </strong><%=@alien.planet.name%></p>
+  <p><strong>Diet: </strong><%=@alien.planet.diet%></p>
   <p><strong>Personality Traits:</strong></p>
-  <ul>
     <%@alien.personalities.each do |personality| %>
     <li><%=personality.name%></li>
     <%end%>
-  </ul>
 </div>
 
 <% if @alien.owner_id == session[:owner_id] %>

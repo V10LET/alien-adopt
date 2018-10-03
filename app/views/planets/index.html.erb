@@ -1,13 +1,15 @@
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
 <h1>Planets</h1>
 
-
+<br>
 <%@planets.each do |planet|%>
-<ul>
-<li><%= planet.name%></li>
-<li><%= planet.climate%></li>
-<li><%= planet.gravity%></li>
-<li><%= planet.diet%></li>
+<ul class="no_bullets">
+<li><a href="/planets/<%=planet.id%>"><%= planet.name%></a></li>
 </ul>
 <br>
 <%end%>
+
+
 
