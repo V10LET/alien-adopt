@@ -7,9 +7,11 @@
 <div class="form">
   <p><strong>Bio: </strong><%=@alien.bio%></p>
   <p><strong>Therapy Alien? </strong><%=@alien.therapy%></p>
-  <p><strong>Favorite Toy: </strong><%= @alien.toy.name %></p>
-  <p><strong>Planet of Origin: </strong><%=@alien.planet.name%></p>
-  <p><strong>Diet: </strong><%=@alien.planet.diet%></p>
+  <p><strong>Favorite Toy - </strong><%= @alien.toy.name %></p>
+  <p><strong>Planet of Origin - </strong><a href='/planets/<%=@alien.planet.id%>'><%=@alien.planet.name%></a>
+
+
+  <p><strong>Diet - </strong><%=@alien.planet.diet%></p>
   <p><strong>Personality Traits:</strong></p>
     <%@alien.personalities.each do |personality| %>
     <li><%=personality.name%></li>

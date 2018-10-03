@@ -5,5 +5,5 @@
 <p>Life forms on this planet eat -   <%=@planet.diet%></p>
 <p>Aliens who call this place home:</p>
 <%@planet.aliens.each do |alien|%>
-<%=alien.name%>
+<a href='/aliens/<%=alien.id%>'><%=alien.name%></a>
 <%end%>
