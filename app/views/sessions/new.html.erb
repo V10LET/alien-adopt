@@ -1,12 +1,15 @@
-<h1>Log in</h1>
-<div class="form">
-  <div style="color: red"><%= flash[:error] %></div>
-  <%= form_with url: login_path do |f| %>
+<body class="login-body">
+  <h1>Log in</h1>
+  <div class="form">
+    <div style="color: red"></div>
+    <%= form_with url: login_path do |f| %>
 
-    <p><strong><%= f.label :email %> </strong><%= f.email_field :email %></p>
-    <p><strong><%= f.label :password %> </strong><%= f.password_field :password %></p>
+      <p class="login-field"><strong><%= f.label :email %> </strong><%= f.email_field :email %></p>
+      <p class="login-field"><strong><%= f.label :password %> </strong><%= f.password_field :password %></p>
 
-    <%= f.submit "Log in", class: "button login_button"%>
-  <% end %>
-  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      <%= f.submit "Login", class: "button login_button"%>
+    <% end %>
+    <br>
+    <p>New user? <span class="sign-up"><%= link_to "Sign up now!", signup_path %><span></p>
+  </div>
 </div>

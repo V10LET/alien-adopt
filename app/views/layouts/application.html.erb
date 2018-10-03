@@ -16,9 +16,10 @@
 
       <div class="alien-logo">
         <% if session[:owner_id] %>
-           <a href="<%=owner_path(session[:owner_id].to_s)%>"><img src="/assets/alien.png" alt="alien-adoption"></a>
+           <a href="<%=owner_path(session[:owner_id].to_s)%>"><p class="logo-nav">
+             <img src="/assets/alien.png" alt="alien-adoption">Alien Adopt</p></a>
         <%else%>
-          <a href="/login"><%= image_tag ("alien.png")%></a>
+          <a href="/login"><p class="logo-nav"><%= image_tag ("alien.png")%>Alien Adopt</p></a>
         <%end%>
       </div>
 
