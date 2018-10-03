@@ -45,3 +45,25 @@ h1 {
 .nav a:visited {
   color: black;
 }
+
+.button {
+  padding: 5px 15px;
+  font-family: "Bai Jamjuree";
+  font-weight: 700;
+  background-color: #ff5c57;
+  font-size: 12px;
+  border-radius: 5px;
+  border-color: rgba(0,0,0,0);
+}
+
+.return_button {
+  background-color: skyblue;
+}
+
+.login_button {
+  background-color: orange;
+}
+
+.logout_button {
+  background-color: mediumpurple;
+}

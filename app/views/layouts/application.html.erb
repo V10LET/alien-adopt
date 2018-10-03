@@ -4,6 +4,7 @@
     <title>AlienAdoptionApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset='utf-8'>
 
     <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,700" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,8 +22,14 @@
     <%end%>
       <p><%= link_to "Home Planets", planets_path %></p>
       <p><%= link_to "Adopt An Alien", aliens_path %></p>
-      <p><%= button_to "Logout", '/logout', method: :delete %></p>
+      <% if session[:owner_id] == nil%>
+        <p><%= button_to "Login", '/login', class: "button login_button" %></p>
+      <%else%>
+          <p><%= button_to "Logout", '/logout', method: :delete, class: "button logout_button" %></p>
+      <% end %>
   </div>
     <%= yield %>
+  <br>
+  <br>
   </body>
 </html>

@@ -26,7 +26,7 @@ turo = Planet.create(name: "Turo", climate: "Chilly", diet: "Sadness")
 traflorkia = Planet.create(name: "Traflorkia", climate: "Spicy", diet: "Steak Tacos")
 mars = Planet.create(name: "Mars", climate: "Toasty", diet: "Red Dust")
 errkt = Planet.create(name: "Errkt", climate: "Temperate", diet: "Cake")
-gallifrey = Planet.create(name: "Galifrey", climate: "Tropical", diet: "Silver Tree Leaves")
+gallifrey = Planet.create(name: "Gallifrey", climate: "Tropical", diet: "Silver Tree Leaves")
 amphibios = Planet.create(name: "Amphibios 9", climate: "Swampy", diet: "Bugs")
 remool = Planet.create(name: "Remool", climate: "Airy", diet: "Humans")
 
@@ -52,7 +52,7 @@ glip_glops = Alien.create(toy: basket, name: "Glip Glops", bio: "mind hive jelli
 timelord = Alien.create(toy: tardis, name: "The Doctor", bio: "travels time and space for friendship, adventure, and ruckus", owner: paul, planet: gallifrey,  therapy: true)
 moon_creature = Alien.create(toy: the_moon, name: "Moon Creature", bio: "posed as errkt's moon and hatched early to disprove flat errkt believers", owner: paul, planet: errkt,  therapy: true)
 groot = Alien.create(toy: tree, name: "Groot", bio: "heals surrounding life forms because quote 'I am Groot?' unquote.", owner: paul, planet: errkt,  therapy: false)
-marvin = Alien.create(toy: raygun, name: "Marvin Martian", bio: "doing his best to take over earth", owner: paul, planet: mars, therapy: false)
+marvin = Alien.create(toy: raygun, name: "Marvin Martian", bio: "doing his best to take over errkt", owner: paul, planet: mars, therapy: false)
 pug = Alien.create(toy: clothes, name: "Frank", bio: "waiting for someone to put some respek on his name", owner: paul, planet: remool, therapy: false)
 
 PersonalityTrait.create(personality: sassy, alien: roger)
