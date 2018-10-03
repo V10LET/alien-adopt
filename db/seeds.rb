@@ -1,6 +1,5 @@
 Personality.destroy_all
 Planet.destroy_all
-Owner.destroy_all
 Alien.destroy_all
 Toy.destroy_all
 PersonalityTrait.destroy_all
@@ -22,19 +21,15 @@ crazy = Personality.create(name: "Crazy")
 aggressive = Personality.create(name: "Aggresive")
 slow = Personality.create(name: "Slow")
 
-zirgon9 = Planet.create(name: "Zirgon 9", climate: "Hot", gravity: 10, diet: "Sand Beetles")
-turo = Planet.create(name: "Turo", climate: "Chilly", gravity: 47, diet: "Ring Sprinkles")
-traflorkia = Planet.create(name: "Traflorkia", climate: "Spicy", gravity: 1, diet: "Steak Tacos")
-mars = Planet.create(name: "Mars", climate: "Toasty", gravity: 234, diet: "Red Grapes")
-errkt = Planet.create(name: "Errkt", climate: "Temperate", gravity: 9.8, diet: "Chipotle Bowl")
-gallifrey = Planet.create(name: "Galifrey", climate: "Tropical", gravity: 0.5, diet: "Silver Tree Leaves")
+zirgon9 = Planet.create(name: "Zirgon 12", climate: "Hot", diet: "Sand Beetles")
+turo = Planet.create(name: "Turo", climate: "Chilly", diet: "Sadness")
+traflorkia = Planet.create(name: "Traflorkia", climate: "Spicy", diet: "Steak Tacos")
+mars = Planet.create(name: "Mars", climate: "Toasty", diet: "Red Dust")
+errkt = Planet.create(name: "Errkt", climate: "Temperate", diet: "Cake")
+gallifrey = Planet.create(name: "Galifrey", climate: "Tropical", diet: "Silver Tree Leaves")
+amphibios = Planet.create(name: "Amphibios 9", climate: "Swampy", diet: "Bugs")
+remool = Planet.create(name: "Remool", climate: "Airy", diet: "Humans")
 
-zoe = Owner.create(name: "Zoe", bio: "Got kicked off zirgon9 for illegal taco mining", therapy: false, planet: mars, email: "mail1@amail.com")
-violet = Owner.create(name: "Violet", bio: "Needs 3rd eye for seeing eye alien", therapy: true, planet: turo, email: "mail2@bmail.org")
-jordan = Owner.create(name: "Jordan", bio: "Traflorkia's most infamous kickboxing legend", therapy: false, planet: traflorkia, email: "mail3@cmail.io")
-micheal = Owner.create(name: "Micheal", bio: "Defeated RagnarIII in Red Grape eating competition", therapy: false, planet: mars, email: "mail4@dmail.co")
-morgan = Owner.create(name: "Morgan", bio: "Looking for fourth heart replacement", therapy: true, planet: zirgon9 , email: "mail5@email.com")
-christie = Owner.create(name: "Christie", bio: "Looking to vacation on Errkt. Came during non-temperate season :( ", therapy: false, planet: errkt, email: "mail6@fmail.com")
 
 clothes = Toy.create(name: "Dress Up Clothes")
 doll = Toy.create(name: "Doll")
@@ -44,15 +39,19 @@ tardis = Toy.create(name: "Tardis")
 the_moon = Toy.create(name: "The moon...and also the rest of the infinite cosmos")
 tree = Toy.create(name: "Woodland Critters")
 basket = Toy.create(name: "Spicy Jelly Basket")
+raygun = Toy.create(name: "Ray Gun")
+surf = Toy.create(name: "Surf Board")
 
-stitch = Alien.create(toy: doll, name: "Stitch", bio: "escaped experiment 626 with a lot of love to give", owner: jordan, planet: errkt,  therapy: true)
-roger = Alien.create(toy: clothes, name: "Roger", bio: "area 51 reject who doesn't care what you think", owner: jordan, planet: errkt,  therapy: false)
-eetee = Alien.create(toy: phone, name: "E.T.", bio: "phoning home — got dial tone", owner: morgan, planet: errkt,  therapy: true)
-zoidburg = Alien.create(toy: clamps, name: "Zoidburg", bio: "posing on errkt as a mediocre doctor - wants to give back but not that much", owner: zoe , planet: zirgon9,  therapy: false)
-glip_glops = Alien.create(toy: basket, name: "Glip Glops", bio: "mind hive jellies with nothing to do and a distaste for peanut butter", owner: micheal, planet: traflorkia,  therapy: false)
-timelord = Alien.create(toy: tardis, name: "The Doctor", bio: "travels time and space for friendship, adventure, and ruckus", owner: violet, planet: gallifrey,  therapy: true)
-moon_creature = Alien.create(toy: the_moon, name: "Moon Creature", bio: "posed as errkt's moon and hatched early to disprove flat errkt believers", owner: violet, planet: mars,  therapy: true)
-groot = Alien.create(toy: tree, name: "Groot", bio: "heals surrounding life forms because quote 'I am Groot?' unquote.", owner: christie, planet: mars,  therapy: true)
+stitch = Alien.create(toy: surf, name: "Stitch", bio: "escaped experiment 626 with a lot of love to give", owner: nil, planet: errkt,  therapy: true)
+roger = Alien.create(toy: clothes, name: "Roger", bio: "area 51 reject who doesn't care what you think", owner: nil, planet: errkt,  therapy: false)
+eetee = Alien.create(toy: phone, name: "E.T.", bio: "phoning home — got dial tone", owner: nil, planet: errkt,  therapy: true)
+zoidburg = Alien.create(toy: clamps, name: "Zoidburg", bio: "posing on errkt as a mediocre doctor - wants to give back but not that much", owner: nil , planet: amphibios,  therapy: false)
+glip_glops = Alien.create(toy: basket, name: "Glip Glops", bio: "mind hive jellies with nothing to do and a distaste for peanut butter", owner: nil, planet: traflorkia,  therapy: false)
+timelord = Alien.create(toy: tardis, name: "The Doctor", bio: "travels time and space for friendship, adventure, and ruckus", owner: nil, planet: gallifrey,  therapy: true)
+moon_creature = Alien.create(toy: the_moon, name: "Moon Creature", bio: "posed as errkt's moon and hatched early to disprove flat errkt believers", owner: nil, planet: errkt,  therapy: true)
+groot = Alien.create(toy: tree, name: "Groot", bio: "heals surrounding life forms because quote 'I am Groot?' unquote.", owner: nil, planet: errkt,  therapy: false)
+marvin = Alien.create(toy: raygun, name: "Marvin Martian", bio: "doing his best to take over earth", owner: nil, planet: mars, therapy: false)
+pug = Alien.create(toy: clothes, name: "Frank", bio: "waiting for someone to put some respek on his name", owner: nil, planet: remool, therapy: false)
 
 PersonalityTrait.create(personality: sassy, alien: roger)
 PersonalityTrait.create(personality: moody, alien: roger)
