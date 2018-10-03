@@ -13,20 +13,30 @@
 
   <body>
     <div class="nav">
-    <%if session[:owner_id] == nil%>
-      <%flash[:error] = "Please log in to view your profile"%>
 
-      <p><a href="/login">My Profile</a></p>
-    <%else%>
-      <p><a href="/owners/<%= session[:owner_id].to_s %>">My Profile</a></p>
-    <%end%>
-      <p><%= link_to "Home Planets", planets_path %></p>
-      <p><%= link_to "Adopt An Alien", aliens_path %></p>
-      <% if session[:owner_id] == nil%>
-        <p><%= button_to "Login", '/login', class: "button login_button" %></p>
-      <%else%>
-          <p><%= button_to "Logout", '/logout', method: :delete, class: "button logout_button" %></p>
-      <% end %>
+      <div class="alien-logo">
+        <% if session[:owner_id] %>
+           <a href="<%=owner_path(session[:owner_id].to_s)%>"><img src="/assets/alien.png" alt="alien-adoption"></a>
+        <%else%>
+          <a href="/login"><%= image_tag ("alien.png")%></a>
+        <%end%>
+      </div>
+
+      <div class="nav-links">
+        <%if session[:owner_id] == nil%>
+          <%flash[:error] = "Please log in to view your profile"%>
+          <p><a href="/login">My Profile</a></p>
+        <%else%>
+          <p><a href="/owners/<%= session[:owner_id].to_s %>">My Profile</a></p>
+        <%end%>
+        <p><%= link_to "Home Planets", planets_path %></p>
+        <p><%= link_to "Adopt An Alien", aliens_path %></p>
+        <% if session[:owner_id] == nil%>
+          <p><%= button_to "Login", '/login', class: "button login_button" %></p>
+        <%else%>
+            <p><%= button_to "Logout", '/logout', method: :delete, class: "button logout_button" %></p>
+        <% end %>
+      </div>
   </div>
     <%= yield %>
   <br>
