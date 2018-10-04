@@ -93,3 +93,38 @@ h1 {
 .logout_button {
   background-color: mediumpurple;
 }
+
+.alien-carousel {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.alien-parent {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.alien-parent a {
+  text-decoration: none;
+}
+
+.alien-parent a:visited {
+  color: black;
+}
+
+.alien-picture {
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.alien-name {
+  font-size: 16px;
+  font-weight: 700;
+}

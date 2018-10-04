@@ -1,15 +1,16 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
-<h1>Planets</h1>
+<h1>🚀 Planets</h1>
 
 <br>
-<%@planets.each do |planet|%>
-<ul class="no_bullets">
-<li><a href="/planets/<%=planet.id%>"><%= planet.name%></a></li>
-</ul>
-<br>
-<%end%>
-
-
-
+<div class="form">
+  <div class="alien-carousel">
+    <%@planets.each do |planet|%>
+      <div class="alien-parent">
+        <a href="/planets/<%=planet.id%>"><img class="alien-picture" src="/assets/<%=planet.name%>.jpg" alt="<%=planet.name%>"/></a>
+        <div class="alien-name"><%= link_to planet.name, planet_path(planet)%></div>
+      </div>
+    <%end%>
+  </div>
+</div>

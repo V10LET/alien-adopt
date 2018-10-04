@@ -1,16 +1,16 @@
-<h1>Alien Adoption Portal</h1>
+<h1>🛸 Alien Adoption Portal</h1>
 
 <div class="form">
   <div class="alien-carousel">
-  <%@aliens.each do |alien|%>
-    <div class="alien-parent">
-      <a href="/aliens/<%=alien.id%>"><img class="alien-picture" src="/assets/<%=alien.name%>.png" alt="<%=alien.name%>"/></a>
-      <%if alien.owner_id %>
-        <div class="alien-name owned"><%= link_to alien.name, alien_path(alien)%></div>
-      <%else%>
-        <div class="alien-name"><%= link_to alien.name, alien_path(alien)%></div>
-      <%end%>
-    </div>
-  <%end%>
-</div>
+    <%@aliens.each do |alien|%>
+      <div class="alien-parent">
+        <a href="/aliens/<%=alien.id%>"><img class="alien-picture" src="/assets/<%=alien.name%>.png" alt="<%=alien.name%>"/></a>
+        <%if alien.owner_id %>
+          <div class="alien-name owned"><%= link_to alien.name, alien_path(alien)%></div>
+        <%else%>
+          <div class="alien-name"><%= link_to alien.name, alien_path(alien)%></div>
+        <%end%>
+      </div>
+    <%end%>
+  </div>
 </div>

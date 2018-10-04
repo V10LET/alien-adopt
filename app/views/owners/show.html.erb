@@ -1,5 +1,6 @@
 <% if @current_owner %>
 
+<body class="owner-show-body">
   <h1>🖖 Hey, <%=@owner.name.titleize%>!</h1>
   <div class="form">
     <p><strong>Bio:</strong> <%=@owner.bio%></p>
@@ -41,3 +42,4 @@
   </form>
 
 <% end %>
+</body>
