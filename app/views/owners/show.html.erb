@@ -20,7 +20,9 @@
     <% end %>
   </div>
   <br>
-  <%= button_to "I Wanna Loggity Log Out", logout_path, method: :delete, class: "button logout_button"%>
+  <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button all_button"%>
+  <br>
+  <%= button_to "✌️ I Wanna Loggity Log Out ✌️", logout_path, method: :delete, class: "button logout_button"%>
 
 <% elsif session[:owner_id] == nil %>
 
@@ -35,7 +37,7 @@
  <% else %>
  <h1>Sorry, this profile is private.</h1>
   <h3>Please choose an option: </h3>
-  <%= button_to "See All Available Aliens", '/aliens', method: :get, class: "button adopt_button"%>
+  <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button adopt_button"%>
   <br>
   <form action="/owners/<%= session[:owner_id]%>">
       <input type="submit" value="Go to My Profile" class="button login_button"/>
