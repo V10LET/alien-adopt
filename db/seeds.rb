@@ -44,14 +44,14 @@ surf = Toy.create(name: "Surf Board")
 
 paul = Owner.create(name: 'paul', bio: 'blah', planet: remool, therapy: false)
 
-stitch = Alien.create(toy: surf, name: "Stitch", bio: "escaped experiment 626 with a lot of love to give", owner: paul, planet: errkt,  therapy: true)
+stitch = Alien.create(toy: surf, name: "Stitch", bio: "escaped experiment 626 with a lot of love to give", owner: paul, planet: turo,  therapy: true)
 roger = Alien.create(toy: clothes, name: "Roger", bio: "area 51 reject who doesn't care what you think", owner: paul, planet: errkt,  therapy: false)
 eetee = Alien.create(toy: phone, name: "ET", bio: "phoning home — got dial tone", owner: paul, planet: errkt,  therapy: true)
 zoidburg = Alien.create(toy: clamps, name: "Zoidberg", bio: "posing on errkt as a mediocre doctor - wants to give back but not that much", owner: paul , planet: amphibios,  therapy: false)
 glip_glops = Alien.create(toy: basket, name: "Glip Glops", bio: "mind hive jellies with nothing to do and a distaste for peanut butter", owner: paul, planet: traflorkia,  therapy: false)
 timelord = Alien.create(toy: tardis, name: "The Doctor", bio: "travels time and space for friendship, adventure, and ruckus", owner: paul, planet: gallifrey,  therapy: true)
-moon_creature = Alien.create(toy: the_moon, name: "Moon Creature", bio: "posed as errkt's moon and hatched early to disprove flat errkt believers", owner: paul, planet: errkt,  therapy: true)
-groot = Alien.create(toy: tree, name: "Groot", bio: "heals surrounding life forms because quote 'I am Groot?' unquote.", owner: paul, planet: errkt,  therapy: false)
+moon_creature = Alien.create(toy: the_moon, name: "Moon Creature", bio: "posed as errkt's moon and hatched early to disprove flat errkt believers", owner: paul, planet: zirgon9,  therapy: true)
+groot = Alien.create(toy: tree, name: "Groot", bio: "heals surrounding life forms because quote 'I am Groot?' unquote.", owner: paul, planet: zirgon9,  therapy: false)
 marvin = Alien.create(toy: raygun, name: "Marvin Martian", bio: "doing his best to take over errkt", owner: paul, planet: mars, therapy: false)
 pug = Alien.create(toy: clothes, name: "Frank", bio: "waiting for someone to put some respek on his name", owner: paul, planet: remool, therapy: false)
 
