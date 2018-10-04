@@ -28,7 +28,6 @@
 
       <div class="nav-links">
         <%if session[:owner_id] == nil%>
-          <%flash[:error] = "Please log in to view your profile"%>
           <p><a href="/login">My Profile</a></p>
         <%else%>
           <p><a href="/owners/<%= session[:owner_id].to_s %>">My Profile</a></p>

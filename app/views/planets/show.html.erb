@@ -1,8 +1,28 @@
-<h1><%=@planet.name%></h1>
-
-<p>The climate on this planet is -   <%=@planet.climate%></p>
-<p>Life forms on this planet eat -   <%=@planet.diet%></p>
-<p>Aliens who call this place home:</p>
-<%@planet.aliens.each do |alien|%>
-<a href='/aliens/<%=alien.id%>'><%=alien.name%></a>
-<%end%>
+<body class="planet-show-body">
+  <%if session[:owner_id] %>
+    <h1>🌐 <%=@planet.name%></h1>
+    <div><img class="alien-picture" src="/assets/<%=@planet.name%>.jpg" alt="<%=@planet.name%>"/></div>
+    <div class="form">
+      <p><strong>The climate on <%= @planet.name %> is - </strong><%=@planet.climate%></p>
+      <p><strong>Life forms on <%= @planet.name %> eat - </strong><%=@planet.diet%></p>
+      <p><strong>Fellow aliens who call <%= @planet.name %> home:</strong></p>
+      <ul>
+        <%@planet.aliens.each do |alien|%>
+          <li><a href='/aliens/<%=alien.id%>'><%=alien.name%></a></li>
+        <%end%>
+      </ul>
+    </div>
+    <br>
+    <%= button_to "🌎 See All Planets 🌍", '/planets', method: :get, class: "button adopt_button"%>
+    <br>
+    <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button all_button"%>
+  <%else%>
+    <h1>🌏 Please login to view planet details.</h1>
+    <h3>Please choose an option:</h3>
+    <%= button_to "See All Available Aliens", '/aliens', method: :get, class: "button all_button"%>
+    <br>
+    <form action="/login">
+        <input type="submit" value="Login" class="button login_button"/>
+    </form>
+  <%end%>
+</body>

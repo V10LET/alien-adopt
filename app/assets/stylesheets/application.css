@@ -79,7 +79,7 @@ h1 {
   border-color: rgba(0,0,0,0);
 }
 .adopt_button {
-  background-color: skyblue;
+  background-color: yellowgreen;
 }
 
 .return_button {
@@ -91,7 +91,11 @@ h1 {
 }
 
 .logout_button {
-  background-color: mediumpurple;
+  background-color: darkorchid;
+}
+
+.all_button {
+  background-color: skyblue;
 }
 
 .alien-carousel {

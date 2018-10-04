@@ -21,18 +21,34 @@
 </div>
 <br>
 <br>
-<% if session[:owner_id] == nil %>
+<% if @alien.owner_id == nil && session[:owner_id] == nil%>
   <%= form_with url: "/login" do |f| %>
   <%= f.submit "💾 Login to Adopt 💾", class: "button login_button"%>
   <% end %>
+  <br>
+  <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button all_button"%>
+
+<% elsif @alien.owner_id && session[:owner_id] == nil %>
+  <button class="button" type="button" disabled>This Alien Has Been Adopted</button>
+  <br>
+  <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button all_button"%>
+
 <% elsif @alien.owner_id == session[:owner_id] %>
   <%= form_with model: @alien do |f| %>
   <%= f.submit "😭 Give Up Your Alien 😭", class: "button return_button"%>
   <% end %>
+  <br>
+  <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button all_button"%>
+
 <% elsif session[:owner_id] && @alien.owner_id == nil%>
   <%= form_with model: @alien do |f| %>
   <%= f.submit "😍 Adopt Me 😍", class: "button adopt_button" %>
   <% end %>
+  <br>
+  <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button all_button"%>
+
 <% else %>
   <button class="button" type="button" disabled>This Alien Has Been Adopted</button>
+  <br>
+  <%= button_to "👽 See All Available Aliens 👽", '/aliens', method: :get, class: "button all_button"%>
 <% end %>
