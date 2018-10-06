@@ -1,6 +1,6 @@
 # Alien Adopt Web App
-
-![alien adopt homepage](https://preview.ibb.co/eg6hZK/homepage.png)
+## Description
+[![alien adopt preview video](https://img.youtube.com/vi/ZXObId1wLkg/0.jpg)](https://www.youtube.com/watch?v=ZXObId1wLkg)
 
 You're not a dog person. You're not a cat person. You're not a snake or gerbil person. You're not a sugar glider person. You're not a goat person. You're not a pig or rabbit person. You are integrated into life on Earth — and yet nothing and no one resonates.
 
@@ -13,3 +13,8 @@ Whether alien, human or non-conforming species, you (and all alien pets) deserve
 No one should experience the interstellar alone...
 
 Cue Alien Adopt.
+
+## Instructions
+Although not currently hosted on a public server, you can clone the web app to your computer. Once you have the the "alien-adopt" file open in your terminal, you will want to install (bundle install) the app's gems, and migrate (rake db:migrate) and seed (rake db:seed) the database — all in your command line. Lastly, type "rails s" in the command line and you're off to adopt an alien in your preferred browser using a local server.
+
+View license [here](https://github.com/V10LET/alien-adopt/blob/violet/LICENSE.md).
